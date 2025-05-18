@@ -1,0 +1,36 @@
+version: 0.0.1
+type: plugin
+author: yt-koike
+name: civit_ai
+label:
+  en_US: CivitAI
+  ja_JP: CivitAI
+  zh_Hans: CivitAI
+  pt_BR: CivitAI
+description:
+  en_US: Unofficial CivitAI plugin for Dify
+  ja_JP: Unofficial CivitAI plugin for Dify
+  zh_Hans: Unofficial CivitAI plugin for Dify
+  pt_BR: Unofficial CivitAI plugin for Dify
+icon: CivitAI.svg
+resource:
+  memory: 268435456
+  permission:
+    tool:
+      enabled: true
+plugins:
+  tools:
+    - provider/civit_ai.yaml
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+  minimum_dify_version: null
+created_at: 2025-05-19T00:52:30.24904715+09:00
+privacy: PRIVACY.md
+verified: false
