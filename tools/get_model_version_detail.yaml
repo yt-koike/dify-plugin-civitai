@@ -8,23 +8,14 @@ description:
     en_US: Gets details of a model at a certain version
   llm: Gets details of a model at a certain version
 parameters:
-  - name: model_id
+  - name: model_version_id
     type: number
     required: true
     label:
-      en_US: Model ID
+      en_US: Model version ID
     human_description:
-      en_US: Model ID
-    llm_description: Model ID
-    form: llm
-  - name: version_id
-    type: number
-    required: true
-    label:
-      en_US: Version ID
-    human_description:
-      en_US: Version ID
-    llm_description: Version ID
+      en_US: Model version ID
+    llm_description: Model version ID
     form: llm
 extra:
   python:
@@ -64,5 +55,3 @@ output_schema:
       type: array[number]
       label:
         en_US: NSFW levels of example image
-    
-    

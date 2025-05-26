@@ -1,28 +1,32 @@
 identity:
-  name: get_model_detail
+  name: get_model_by_hash
   author: yt-koike
   label:
-    en_US: Model Detail
+    en_US: Get model by hash
 description:
   human:
-    en_US: Gets details of a model
-  llm: Gets details of a model
+    en_US: Gets model by hash
+  llm: Gets model by hash
 parameters:
-  - name: model_id
-    type: number
+  - name: model_hash
+    type: string
     required: true
     label:
-      en_US: Model ID
+      en_US: Model Hash
     human_description:
-      en_US: Gets details of a model
-    llm_description: Gets details of a model
+      en_US: Gets a model by hash
+    llm_description: Gets a model by hash
     form: llm
 extra:
   python:
-    source: tools/get_model_detail.py
+    source: tools/get_model_by_hash.py
 output_schema:
   type: object
   properties:
+    model_id:
+      type: number
+      label:
+        en_US: Model ID
     name:
       type: string
       label:
@@ -54,11 +58,11 @@ output_schema:
     creator_icon_url:
       type: string
       label:
-        en_US: Creator Icon URL
+        en_US: Creator Image URL
     version_ids:
       type: array[number]
       label:
-        en_US: Version IDs
+        en_US: Creator Image URL
     download_count:
       type: number
       label:
@@ -70,4 +74,4 @@ output_schema:
     thumbs_down_count:
       type: number
       label:
-        en_US: Thumbs Down Count
+        en_US: Thumbs Up Count

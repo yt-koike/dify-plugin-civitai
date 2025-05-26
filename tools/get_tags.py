@@ -15,17 +15,10 @@ class ModelVersionDetail(Tool):
         cli = CivitAI(api_key)
         if tool_parameters.get("model_version_id") is None:
             yield self.create_text_message("Please input model_version_id")
-        json = cli.get_model_version(
-            str(tool_parameters.get("model_version_id")))
+        json = cli.get_tags(tool_parameters.get("limit", 20))
         yield self.create_json_message(json)
 
-        mapping = {"created_at": json["createdAt"],
-                   "published_at": json["publishedAt"],
-                   "url": json["downloadUrl"],
-                   "download_count": json["stats"]["downloadCount"],
-                   "file_names": [f["name"] for f in json["files"]],
-                   "file_urls": [f["downloadUrl"] for f in json["files"]],
-                   "image_urls": [img["url"] for img in json["images"]],
-                   "image_nsfw": [img["nsfwLevel"] for img in json["images"]]}
+        mapping = {"name": [item["name"] for item in json["items"]],
+                   "link": [item["link"] for item in json["items"]]}
         for key in mapping:
             yield self.create_variable_message(key, mapping[key])
