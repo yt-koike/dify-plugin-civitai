@@ -11,7 +11,7 @@ identity:
     pt_BR: Unofficial CivitAI plugin for Dify
   icon: CivitAI.svg
 tools:
-  - tools/get_creators.yaml
+  # - tools/get_creators.yaml # The endpoint https://civitai.com/api/v1/creators seems to be not working.
   - tools/get_images.yaml
   - tools/get_model_by_hash.yaml
   - tools/get_model_detail.yaml

@@ -58,7 +58,7 @@ parameters:
   - name: nsfw
     form: form
     label:
-      en_US: nsfw
+      en_US: NSFW Filter
     human_description:
       en_US: Filter to images that contain mature content flags or not (undefined returns all)
     llm_description: Filter to images that contain mature content flags or not (undefined returns all)
@@ -86,7 +86,7 @@ parameters:
     type: select
     human_description:
       en_US: Type of model
-    default: None
+    default: Most Reactions
     required: true
     options:
       - value: Most Reactions

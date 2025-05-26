@@ -101,27 +101,33 @@ parameters:
     type: select
     human_description:
       en_US: Type of model
-    default: None
+    default: Highest Rated
     required: true
     options:
-      - value: Most Reactions
+      - value: Highest Rated
         label:
-          en_US: Most Reactions
-      - value: Most Comments
+          en_US: Highest Rated
+      - value: Most Downloaded
         label:
-          en_US: Most Comments
+          en_US: Most Downloaded
+      - value: Most Liked
+        label:
+          en_US: Most Liked
+      - value: Most Discussed
+        label:
+          en_US: Most Discussed
       - value: Most Collected
         label:
           en_US: Most Collected
+      - value: Most Images
+        label:
+          en_US: Most Images
       - value: Newest
         label:
           en_US: Newest
       - value: Oldest
         label:
           en_US: Oldest
-      - value: Random
-        label:
-          en_US: Random
   - name: period
     form: form
     label:
@@ -135,7 +141,7 @@ parameters:
     options:
       - value: AllTime
         label:
-          en_US: AllTime
+          en_US: All Time
       - value: Year
         label:
           en_US: Year
@@ -178,36 +184,26 @@ parameters:
       en_US: The number of results to be returned per page.
     llm_description: The number of results to be returned per page.
     form: form
-  - name: primaryFileOnly
-    type: boolean
-    required: false
-    default: false
-    label:
-      en_US: primaryFileOnly
-    human_description:
-      en_US: The number of results to be returned per page.
-    llm_description: The number of results to be returned per page.
-    form: form
-  - name: allowNoCredit
-    type: boolean
-    required: false
-    default: false
-    label:
-      en_US: allowNoCredit
-    human_description:
-      en_US: The number of results to be returned per page.
-    llm_description: The number of results to be returned per page.
-    form: form
-  - name: allowDerivatives
-    type: boolean
-    required: false
-    default: false
-    label:
-      en_US: allowDerivatives
-    human_description:
-      en_US: The number of results to be returned per page.
-    llm_description: The number of results to be returned per page.
-    form: form
+  #- name: allowNoCredit
+  #  type: boolean
+  #  required: false
+  #  default: false
+  #  label:
+  #    en_US: allowNoCredit
+  #  human_description:
+  #    en_US: The number of results to be returned per page.
+  #  llm_description: The number of results to be returned per page.
+  #  form: form
+  #- name: allowDerivatives
+  #  type: boolean
+  #  required: false
+  #  default: false
+  #  label:
+  #    en_US: allowDerivatives
+  #  human_description:
+  #    en_US: The number of results to be returned per page.
+  #  llm_description: The number of results to be returned per page.
+  #  form: form
   - name: allowDifferentLicenses
     type: boolean
     required: false
@@ -218,29 +214,29 @@ parameters:
       en_US: The number of results to be returned per page.
     llm_description: The number of results to be returned per page.
     form: form
-  - name: allowCommercialUse
-    form: form
-    label:
-      en_US: allowCommercialUse
-    llm_description: Sort
-    type: select
-    human_description:
-      en_US: Type of model
-    default: None
-    required: true
-    options:
-      - value: None
-        label:
-          en_US: None
-      - value: Image
-        label:
-          en_US: Image
-      - value: Rent
-        label:
-          en_US: Rent
-      - value: Sell
-        label:
-          en_US: Sell
+  #- name: allowCommercialUse
+  #  form: form
+  #  label:
+  #    en_US: allowCommercialUse
+  #  llm_description: Sort
+  #  type: select
+  #  human_description:
+  #    en_US: Type of model
+  #  default: None
+  #  required: true
+  #  options:
+  #    - value: None
+  #      label:
+  #        en_US: None
+  #    - value: Image
+  #      label:
+  #        en_US: Image
+  #    - value: Rent
+  #      label:
+  #        en_US: Rent
+  #    - value: Sell
+  #      label:
+  #        en_US: Sell
   - name: nsfw
     type: boolean
     required: false

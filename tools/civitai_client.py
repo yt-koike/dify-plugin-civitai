@@ -69,9 +69,24 @@ class CivitAI:
             params["sort"] = sort
         if period is not None:
             params["period"] = period
-        if allowCommercialUse is not None:
-            params["allowCommercialUse"] = allowCommercialUse
-
+        if favorites is not None:
+            params["favorites"] = favorites
+        if hidden is not None:
+            params["hidden"] = hidden
+        if primaryFileOnly is not None:
+            params["primaryFileOnly"] = primaryFileOnly
+        # if allowNoCredit is not None: # Commented out because of unknown error
+        #    params["allowNoCredit"] = allowNoCredit
+        # if allowDerivatives is not None: # Commented out because of unknown error
+        #    params["allowDerivatives"] = allowDerivatives
+        if allowDifferentLicenses is not None:
+            params["allowDifferentLicenses"] = allowDifferentLicenses
+        # if allowCommercialUse is not None: # Commented out because of unknown error
+        #    params["allowCommercialUse"] = allowCommercialUse
+        if nsfw is not None:
+            params["nsfw"] = nsfw
+        if supportsGeneration is not None:
+            params["supportsGeneration"] = supportsGeneration
         response_dict = self._call(
             "https://civitai.com/api/v1/models", params, True)
         return response_dict

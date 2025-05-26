@@ -23,6 +23,7 @@ class GetModels(Tool):
                               page=tool_parameters.get("page"),
                               query=tool_parameters.get("query"),
                               tag=tool_parameters.get("tag"),
+                              username=tool_parameters.get("username"),
                               types=types,
                               sort=tool_parameters.get("sort"),
                               period=tool_parameters.get("period"),
@@ -30,16 +31,15 @@ class GetModels(Tool):
                               hidden=tool_parameters.get("hidden"),
                               primaryFileOnly=tool_parameters.get(
                                   "primaryFileOnly"),
-                              allowNoCredit="true" if tool_parameters.get(
-                                  "allowNoCredit") else "false",
-                              allowDerivatives="true" if tool_parameters.get(
-                                  "allowDerivatives") else "false",
-                              allowDifferentLicenses="true" if tool_parameters.get(
-                                  "allowDifferentLicenses") else "false",
+                              allowNoCredit=tool_parameters.get(
+                                  "allowNoCredit"),
+                              allowDerivatives=tool_parameters.get(
+                                  "allowDerivatives"),
+                              allowDifferentLicenses=tool_parameters.get(
+                                  "allowDifferentLicenses"),
                               allowCommercialUse=allowCommercialUse,
-                              nsfw="true" if tool_parameters.get(
-                                  "nsfw") else "false",
-                              supportsGeneration="true" if tool_parameters.get("supportsGeneration") else "false")
+                              nsfw=tool_parameters.get("nsfw"),
+                              supportsGeneration=tool_parameters.get("supportsGeneration") == 1)
 
         yield self.create_json_message(json)
 
