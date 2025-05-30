@@ -1,8 +1,8 @@
 identity:
-  name: get_model_detail
+  name: get_model_details
   author: yt-koike
   label:
-    en_US: Model Detail
+    en_US: Model Details
 description:
   human:
     en_US: Gets details of a model
@@ -19,7 +19,7 @@ parameters:
     form: llm
 extra:
   python:
-    source: tools/get_model_detail.py
+    source: tools/get_model_details.py
 output_schema:
   type: object
   properties:

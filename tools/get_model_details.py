@@ -7,7 +7,7 @@ from dify_plugin.entities.tool import ToolInvokeMessage
 from .civitai_client import CivitAI
 
 
-class ModelDetail(Tool):
+class ModelDetails(Tool):
     def _invoke(self, tool_parameters: dict[str, Any]) -> Generator[ToolInvokeMessage]:
         api_key = self.runtime.credentials.get("civitai_api_key")
         if not api_key:
@@ -17,7 +17,7 @@ class ModelDetail(Tool):
             yield self.create_text_message("Please input model_id")
             return
         model_id = tool_parameters["model_id"]
-        json = cli.get_model_detail(str(model_id))
+        json = cli.get_model_details(str(model_id))
         yield self.create_json_message(json)
 
         mapping = {"name": json["name"],

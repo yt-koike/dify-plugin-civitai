@@ -7,7 +7,7 @@ from dify_plugin.entities.tool import ToolInvokeMessage
 from .civitai_client import CivitAI
 
 
-class ModelVersionDetail(Tool):
+class Tags(Tool):
     def _invoke(self, tool_parameters: dict[str, Any]) -> Generator[ToolInvokeMessage]:
         api_key = self.runtime.credentials.get("civitai_api_key")
         if not api_key:

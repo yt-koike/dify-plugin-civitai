@@ -1,5 +1,5 @@
 identity:
-  name: get_model_version_detail
+  name: get_model_version_details
   author: yt-koike
   label:
     en_US: Model Detail(Version)
@@ -19,7 +19,7 @@ parameters:
     form: llm
 extra:
   python:
-    source: tools/get_model_version_detail.py
+    source: tools/get_model_version_details.py
 output_schema:
   type: object
   properties:

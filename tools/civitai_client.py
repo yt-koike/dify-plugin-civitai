@@ -91,7 +91,7 @@ class CivitAI:
             "https://civitai.com/api/v1/models", params, True)
         return response_dict
 
-    def get_model_detail(self, modelId: str) -> dict:
+    def get_model_details(self, modelId: str) -> dict:
         response_dict = self._call(
             "https://civitai.com/api/v1/models/"+modelId, {}, True)
         return response_dict
