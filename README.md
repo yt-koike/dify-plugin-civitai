@@ -17,7 +17,7 @@ You can simply use this plugin by installing it.
 ### Nodes
 
 This plugin has various nodes to use CivitAI API.
-
+These output commonly used parameters but you can extract others from json.
 
 ![nodes](_assets/nodes.png)
 
