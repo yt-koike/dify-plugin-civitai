@@ -14,8 +14,8 @@ tools:
   # - tools/get_creators.yaml # The endpoint https://civitai.com/api/v1/creators seems to be not working.
   - tools/get_images.yaml
   - tools/get_model_by_hash.yaml
-  - tools/get_model_detail.yaml
-  - tools/get_model_version_detail.yaml
+  - tools/get_model_details.yaml
+  - tools/get_model_version_details.yaml
   - tools/get_models.yaml
   - tools/get_tags.yaml
 extra:
