@@ -9,9 +9,9 @@ label:
   pt_BR: CivitAI
 description:
   en_US: Unofficial CivitAI plugin for Dify
-  ja_JP: Unofficial CivitAI plugin for Dify
-  zh_Hans: Unofficial CivitAI plugin for Dify
-  pt_BR: Unofficial CivitAI plugin for Dify
+  ja_JP: 非公式 CivitAI プラグイン
+  zh_Hans: 非官方 CivitAI 插件
+  pt_BR: Plug-in não oficial do CivitAI
 icon: CivitAI.svg
 resource:
   memory: 268435456
