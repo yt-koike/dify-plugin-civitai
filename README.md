@@ -6,7 +6,7 @@
 
 ### Description
 
-This is an unofficial CivitAI plugin for Dify and basically sugarcoats [CivitAI Rest API](https://developer.civitai.com/docs/api/public-rest).
+This is an unofficial CivitAI plugin for Dify and is basically a nodified version of [CivitAI Rest API](https://developer.civitai.com/docs/api/public-rest).
 
 ### Setup
 
